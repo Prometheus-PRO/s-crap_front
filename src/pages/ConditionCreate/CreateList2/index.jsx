@@ -1,10 +1,23 @@
-// CreateList2.js
 import React, { useEffect } from 'react';
-import { StepHeader, StepText, Search, RecommendSong } from '../../components';
-import { Container, Button, Detail } from './styled';
+import {
+  StepHeader,
+  StepText,
+  Search,
+  RecommendSong,
+} from '../../../components';
+import {
+  Container,
+  Button,
+  Detail,
+  ListButton,
+  Image,
+  ButtonWrapper,
+  Badge,
+} from './styled';
 import { useRecoilValue } from 'recoil';
-import { songState } from '../../store/atoms';
+import { songState } from '../../../store/atoms';
 import { useNavigate } from 'react-router-dom';
+import list from '../../../assets/images/list.svg';
 
 const CreateList2 = () => {
   const songs = useRecoilValue(songState);
@@ -12,7 +25,7 @@ const CreateList2 = () => {
 
   const handleButtonClick = () => {
     if (songs.length !== 0) {
-      navigate('/step3');
+      navigate('/when3');
     }
   };
 
@@ -25,9 +38,15 @@ const CreateList2 = () => {
       <Detail>선택한 상황에 어울리는 노래를 추천해드려요.</Detail>
       <Search info="노래, 가수를 입력하세요." />
       <RecommendSong />
-      <Button onClick={handleButtonClick} disabled={songs.length === 0}>
-        다음
-      </Button>
+      <ButtonWrapper>
+        <Button onClick={handleButtonClick} disabled={songs.length === 0}>
+          다음
+        </Button>
+        <ListButton>
+          {songs.length > 0 && <Badge>{songs.length}</Badge>}
+          <Image src={list} />
+        </ListButton>
+      </ButtonWrapper>
     </Container>
   );
 };

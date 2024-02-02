@@ -10,14 +10,17 @@ import {
   RightImage,
   Text,
   boxVariants,
+  RegenerateBtn,
 } from './styled';
 import { AnimatePresence } from 'framer-motion';
 import { wrap } from 'popmotion';
 import { images, texts } from './index-data.js';
+import rg from '../../assets/images/regenerate.svg';
 
-const RollingBanner = () => {
+const RollingBanner = ({ flag }) => {
   const [visible, setVisible] = useState(0);
   const [back, setBack] = useState(false);
+  const [isBoxClicked, setIsBoxClicked] = useState(false);
   const imageIndex = wrap(0, images.length, visible);
 
   const nextPlease = () => {
@@ -40,7 +43,10 @@ const RollingBanner = () => {
   const handleSideImageClick = (index) => {
     setVisible(index);
   };
-
+  const handleBoxClick = () => {
+    console.log(`Selected box index: ${visible}`);
+    setIsBoxClicked((prev) => !prev);
+  };
   const [prevImage, currentImage, nextImage] = getSideImages();
 
   return (
@@ -63,6 +69,8 @@ const RollingBanner = () => {
               animate="center"
               exit="exit"
               key={visible}
+              onClick={handleBoxClick}
+              isBoxClicked={isBoxClicked}
             />
           </AnimatePresence>
         </SlideWrap>
@@ -74,7 +82,13 @@ const RollingBanner = () => {
           <RightImage src={nextImage} alt="next" />
         </RightSideBox>
       </Wrapper>
-      <Text>{texts[imageIndex]}</Text>
+      {flag === 'coverImg' ? (
+        <RegenerateBtn>
+          <img src={rg} alt="rg" />
+        </RegenerateBtn>
+      ) : (
+        <Text>{texts[imageIndex]}</Text>
+      )}
     </Container>
   );
 };

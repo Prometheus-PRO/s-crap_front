@@ -13,4 +13,5 @@ export const Container = styled.p`
 export const StyledText = styled.p`
   line-height: 30px;
   color: #ffffff;
+  font-weight: bold;
 `;

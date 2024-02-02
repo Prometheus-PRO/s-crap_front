@@ -15,18 +15,11 @@ export const Image = styled.img`
 
 export const Info = styled.p`
   color: #878888;
-  line-height: 20px;
-  text-align: center;
+  line-height: 28px;
 `;
 
 export const Wrapper = styled.div`
   margin-top: 3vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-export const NoneWrapper = styled.div`
-  margin-top: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,8 +49,6 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const MyBtn = styled.div`
-  background: #28292a;
-  border-radius: 28px;
   width: 30vw;
   display: flex;
   justify-content: center;
@@ -65,6 +56,8 @@ export const MyBtn = styled.div`
 `;
 
 export const OtherBtn = styled.div`
+  background: #28292a;
+  border-radius: 28px;
   width: 30vw;
   display: flex;
   justify-content: center;

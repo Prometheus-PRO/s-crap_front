@@ -15,7 +15,9 @@ const StepHeader = ({ step }) => {
   return (
     <Container>
       <Image src={prev} alt="prev" />
-      {stepImage && <Image src={stepImage} alt={`step ${step}`} />}
+      {step !== 0 && stepImage && (
+        <Image src={stepImage} alt={`step ${step}`} />
+      )}
       <Image src={cancle} alt="cancle" />
     </Container>
   );

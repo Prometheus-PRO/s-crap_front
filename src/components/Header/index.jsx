@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Image } from './styled';
 
-import play from '../../assets/images/play.svg';
+import logo from '../../assets/images/logo.svg';
 import profile from '../../assets/images/profile.svg';
 
 const Header = () => {
   return (
     <Container>
-      <Image src={play} alt="headerlogo" />
+      <Image src={logo} alt="headerlogo" />
       <Image src={profile} alt="profile" />
     </Container>
   );

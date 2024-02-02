@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: auto;
 `;
 
 export const Button = styled.button`
@@ -19,9 +20,8 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: fixed;
-  bottom: 2.5vh;
-  margin-bottom: 2.5vh;
+  margin-top: auto;
+  margin-bottom: 5vh;
   cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
@@ -29,7 +29,10 @@ export const Detail = styled.div`
   display: flex;
   align-self: flex-start;
   color: #878888;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   margin: 2.5vh 0;
   margin-left: 4vw;
+  margin-bottom: 6vh;
 `;
+
+export const Image = styled.img``;
