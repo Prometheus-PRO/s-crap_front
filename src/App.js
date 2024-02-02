@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { RecoilRoot } from 'recoil';
-import Router from './Router';
-import throttle from 'lodash/throttle';
+import React, { useState, useEffect } from "react";
+import { RecoilRoot } from "recoil";
+import Router from "./Router";
+import throttle from "lodash/throttle";
 
-import './styles/reset.css';
+import "./styles/reset.css";
 
 const App = () => {
   const [vh, setVh] = useState(window.innerHeight * 0.01);
@@ -18,9 +18,9 @@ const App = () => {
 
   useEffect(() => {
     setScreenSize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, [handleResize]);
 

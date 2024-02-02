@@ -9,6 +9,8 @@ import When1 from './pages/ConditionCreate/CreateList1';
 import When2 from './pages/ConditionCreate/CreateList2';
 import When3 from './pages/ConditionCreate/CreateList3';
 import When4 from './pages/ConditionCreate/CreateList4';
+import PlayMusic from './pages/PlayMusic';
+import PlayList from './pages/PlayList';
 
 const Router = () => {
   return (
@@ -22,6 +24,8 @@ const Router = () => {
         <Route path="/when2" element={<When2 />} />
         <Route path="/when3" element={<When3 />} />
         <Route path="/when4" element={<When4 />} />
+        <Route path="/playmusic" element={<PlayMusic />} />
+        <Route path="/playlist" element={<PlayList />} />
       </Routes>
     </BrowserRouter>
   );
