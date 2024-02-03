@@ -24,54 +24,48 @@ import BackButtonIcon from '../../assets/images/back_button.svg';
 import PlusIcon from '../../assets/images/plus.svg';
 import ShareIcon from '../../assets/images/share.svg';
 //더미 데이터 --------------------------------
-import BackgroundImage from '../../assets/dummy/background.png';
-import song1 from '../../assets/images/song.svg';
-import song2 from '../../assets/images/song2.svg';
-import song3 from '../../assets/images/song3.svg';
-import song4 from '../../assets/images/song4.svg';
+
+import BackgroundImage from '../../assets/images/leemu.svg';
+import song1 from '../../assets/images/mu1.svg';
+import song2 from '../../assets/images/mu2.svg';
+import song3 from '../../assets/images/mu3.svg';
+
 //--------------------------------
-const PlayList = () => {
+const WhoList = () => {
   const navigate = useNavigate();
   const playList = {
-    condition: '비올 때,',
+    condition: '언제든지,',
     thumb: BackgroundImage,
-    artist: '아이유',
+    artist: '이무진',
     music: [
       {
-        title: '숲',
-        artist: '최유리',
-        aiArtist: '아이유',
+        title: '이 밤을 빌려 말해요',
+        artist: '10cm',
+        aiArtist: '이무진',
         thumb: song1,
       },
       {
-        title: '우산',
-        artist: '윤하',
-        aiArtist: '아이유',
+        title: '노래방에서',
+        artist: '장범준',
+        aiArtist: '이무진',
         thumb: song2,
       },
       {
-        title: '비도 오고 그래서',
-        artist: '헤이즈',
-        aiArtist: '아이유',
+        title: '사월의 눈',
+        artist: '허각',
+        aiArtist: '이무진',
         thumb: song3,
-      },
-      {
-        title: '북두칠성',
-        artist: '로이킴',
-        aiArtist: '아이유',
-        thumb: song4,
       },
     ],
   };
 
-  //공유버턴 클릭 이벤트
   const clickShareButton = () => {};
   //추가 버튼 클릭 이벤트
   const clickPlusButton = () => {};
   //재생버튼 추가
   const clickPlayButton = () => {};
   const handleItemClick = () => {
-    navigate('/playmusic');
+    navigate('/whoplay');
   };
 
   return (
@@ -128,4 +122,4 @@ const PlayList = () => {
   );
 };
 
-export default PlayList;
+export default WhoList;

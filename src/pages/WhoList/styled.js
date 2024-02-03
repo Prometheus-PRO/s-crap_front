@@ -41,7 +41,7 @@ export const Title = styled.h1`
 `;
 
 export const ColorText = styled.span`
-  color: #8b16ff;
+  color: #fe8ec5;
   max-width: 200px;
   -webkit-text-stroke-width: 1;
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.2);

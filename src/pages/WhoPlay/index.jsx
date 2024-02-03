@@ -18,8 +18,8 @@ import {
 } from './styled';
 import { useNavigate } from 'react-router-dom';
 import { axiosInstance } from '../../apis';
-import BackgroundImage from '../../assets/dummy/background.png';
-import ThumbImage from '../../assets/dummy/thumb.png';
+import BackgroundImage from '../../assets/images/leemu.svg';
+import ThumbImage from '../../assets/images/mu2.svg';
 import Arrow from '../../assets/images/arrow_down.svg';
 import Microphone from '../../assets/images/microphone.svg';
 import MusicPlayer from '../../components/MusicPlayer';
@@ -27,9 +27,9 @@ import MusicPlayer from '../../components/MusicPlayer';
 const PlayMusic = () => {
   const navigate = useNavigate();
   const [music, setMusic] = useState({
-    title: '숲',
-    artist: '최유리',
-    aiArtist: '아이유',
+    title: '노래방에서',
+    artist: '장범준',
+    aiArtist: '이무진',
     thumb: ThumbImage,
     backgroundImage: BackgroundImage,
     src: '',
@@ -38,18 +38,18 @@ const PlayMusic = () => {
   useEffect(() => {
     const getSong = async () => {
       try {
-        const response = await axiosInstance.get(`/IU-Forrest.mp3`);
+        const response = await axiosInstance.get(`/Lee mu jin-Karaoke.mp3`);
         console.log(response.data);
         setMusic((prevMusic) => ({
           ...prevMusic,
-          src: 'http://218.156.133.227:8080/IU-Forrest.mp3',
+          src: 'http://218.156.133.227:8080/Lee mu jin-Karaoke.mp3',
         }));
       } catch (error) {
         console.error(error);
       }
     };
     getSong();
-  }, []); // 빈 배열을 넣어 한 번만 실행되도록 설정
+  }, []);
 
   return (
     <Container style={{ backgroundImage: `url(${music.backgroundImage})` }}>

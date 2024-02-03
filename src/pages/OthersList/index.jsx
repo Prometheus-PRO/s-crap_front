@@ -19,7 +19,7 @@ const OthersList = () => {
   const navigate = useNavigate();
 
   const handleMyBtnClick = () => {
-    navigate('/mylist');
+    navigate('/');
   };
 
   const handleAddBtnClick = () => {
@@ -35,10 +35,10 @@ const OthersList = () => {
       <AddBtn src={add} alt="add" onClick={handleAddBtnClick} />
       <ButtonWrapper>
         <MyBtn onClick={handleMyBtnClick}>
-          <img src={my} />
+          <img src={my} alt="my" />
         </MyBtn>
         <OtherBtn>
-          <img src={selected_others} />
+          <img src={selected_others} alt="others" />
         </OtherBtn>
       </ButtonWrapper>
     </Container>
